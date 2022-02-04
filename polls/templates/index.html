@@ -1,0 +1,38 @@
+<html>
+  <style>
+    .content {
+      max-width: 500px;
+      margin: auto;
+    }
+    </style>
+<body style="background-color:powderblue;">
+<div class=content>
+<div class="wrap">
+<h1>Enter a Text</h1>
+
+  <form method="post" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+<input type="text" id="in" name="inputtext"><br><br>
+
+  <br><br>
+  <input type="submit" value="Submit" color=blue>
+</form>
+{% if response != 3 %}
+    <div>
+  {% if response == "Sad" %}
+    <div>
+    <h2>The response is: {{ response }} </h2><br>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjap3C3AeZVwatz8v5hOu6dyq2MVkLZlYIqw&usqp=CAU">
+    </div>
+  {% else %}
+     <div>
+    <h2>The response is: {{ response }} </h2><br>
+    <img src="https://i.pinimg.com/550x/86/54/af/8654af8dfd78459a077ff990365a1ac5.jpg">
+     </div>
+    </div>
+ {% endif %} 
+{% endif %} 
+</div>
+</body>      
+</div>    
+</html>

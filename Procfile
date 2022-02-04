@@ -1,0 +1,1 @@
+web: gunicorn sentiment_dj.wsgi --log-file -
