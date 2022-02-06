@@ -17,19 +17,22 @@
   <br><br>
   <input type="submit" value="Submit" color=blue>
 </form>
-{% if response != 3 %}
+{% load static %}
+{% if response  %}
     <div>
   {% if response == "Sad" %}
     <div>
     <h2>The response is: {{ response }} </h2><br>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjap3C3AeZVwatz8v5hOu6dyq2MVkLZlYIqw&usqp=CAU">
+    <img src="{% static 'admin/img/sad image.jpg'%}" alt="" srcset="">
     </div>
   {% else %}
      <div>
     <h2>The response is: {{ response }} </h2><br>
-    <img src="https://i.pinimg.com/550x/86/54/af/8654af8dfd78459a077ff990365a1ac5.jpg">
+    <img src="{% static 'admin/img/happy smile.jpg'%}" alt="" srcset="">
      </div>
+     
     </div>
+ 
  {% endif %} 
 {% endif %} 
 </div>
