@@ -1,1 +1,1 @@
-web: gunicorn sentiment_dj.wsgi --log-file -
+web: gunicorn sentiment_dj.wsgi:application  --log-file -
